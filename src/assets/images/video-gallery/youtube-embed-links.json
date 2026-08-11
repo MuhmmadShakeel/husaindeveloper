@@ -1,0 +1,35 @@
+{
+  "title": "Construction Site",
+  "card_count": 5,
+  "youtube_video_id": "exjKz2MC6_E",
+  "watch_url": "https://www.youtube.com/watch?v=exjKz2MC6_E&t=22s",
+  "embed_url": "https://www.youtube.com/embed/exjKz2MC6_E?start=22",
+  "live_site_note": "All five gallery cards use the same YouTube video on the live website.",
+  "gallery_items": [
+    {
+      "card": 1,
+      "thumbnail": "construction-site-01.webp",
+      "local_video": "construction-site-01.mp4"
+    },
+    {
+      "card": 2,
+      "thumbnail": "construction-site-02.webp",
+      "local_video": "construction-site-02.mp4"
+    },
+    {
+      "card": 3,
+      "thumbnail": "construction-site-03.webp",
+      "local_video": "construction-site-03.mp4"
+    },
+    {
+      "card": 4,
+      "thumbnail": "construction-site-04.webp",
+      "local_video": "construction-site-04.mp4"
+    },
+    {
+      "card": 5,
+      "thumbnail": "construction-site-05.webp",
+      "local_video": "construction-site-05.mp4"
+    }
+  ]
+}

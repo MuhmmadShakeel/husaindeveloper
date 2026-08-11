@@ -1,0 +1,153 @@
+const projectAssets = import.meta.glob('../assets/images/projects/**/*.webp', {
+  eager: true,
+  import: 'default',
+})
+
+const getAsset = (slug, file) => projectAssets[`../assets/images/projects/${slug}/${file}`]
+
+export const facilities = [
+  'Underground Electricity',
+  'Gas',
+  'Bank',
+  'Hospital',
+  'School',
+  'Cash & Carry',
+  'Parks',
+  'Mosque',
+  'Carpet Roads',
+  '24/7 Security',
+  'Community Building',
+  'Commercial Area',
+  'Gold Class Cinema',
+  'Zoo',
+  'Fountains',
+  'Theme Park',
+]
+
+export const facilitiesIntroduction = "There present several top-class facilities and amenities in the state-of-the-art Hussain Developers. One of the top reasons for becoming the public's top priority lies in its facilities and amenities. The properties of Hussain Developers are selling like hotcakes in the market due to its commitment to revamped community living. Have a look at some of its facilities and amenities."
+
+const projectDefinitions = [
+  {
+    id: '1',
+    slug: 'al-rahim-town',
+    name: 'Al Rahim Town',
+    category: 'Town',
+    city: 'Bahawal Pur',
+    heroText: 'Al Rahim Town Bahawalpur Map With All features And Latest Development.',
+    tagline: 'Al Rahim Town Bahawalpur Map With All features And Latest Development.',
+    overview: 'The real estate industry, despite being highly expensive, provides rare community-building & urban living infrastructures in Pakistan. A considerable number of property developers sell only cemented infrastructures in the name of modern housing projects. You are pretty aware of the increase in property prices with no end in sight.Hussain Developer has started rendering its services because of the ethical provision of real estate facilities & amenities according to the charged property rates.Al Rahim Town offers 3 Marla Plots, 5 Marla Urban Terraces Homes, and 2 Marla Commercial Plots in its beautiful enclave situated at an attractive geographical location.',
+    location: 'Al Rahim Town Jhangi wala Road Bahawalpur.',
+    paymentPlans: ['Rate Rs 600,000 per marla Total Net Cash.'],
+    constructionUpdate: 'The construction work in Al Rahim Town is in full pace. The managment claims to complete this project in the upcoming year. So, book your plot now with Hussain Developer as the current prices are on pre-launch basis.',
+  },
+  {
+    id: '2',
+    slug: 'al-rahim-villas',
+    name: 'Al Rahim Villas',
+    category: 'Villas',
+    city: 'Bahawal Pur',
+    heroText: 'Al Rahim Villas Bahawalpur Map With All features And Latest Development.',
+    tagline: 'Al Rahim Villas Bahawalpur Map With All features And Latest Development.',
+    overview: 'The real estate industry, despite being highly expensive, provides rare community-building & urban living infrastructures in Pakistan. A considerable number of property developers sell only cemented infrastructures in the name of modern housing projects. You are pretty aware of the increase in property prices with no end in sight.Hussain Developer has started rendering its services because of the ethical provision of real estate facilities & amenities according to the charged property rates. Al Rahim Villas offers 3 Marla Plots, 5 Marla Urban Terraces Homes, and 2 Marla Commercial Plots in its beautiful enclave situated at an attractive geographical location.',
+    location: 'Al Rahim Villas Jhangi wala Road Bahawlapur.',
+    paymentPlans: ['Rate Rs 600,000 per marla Total Net Cash.'],
+    constructionUpdate: 'The construction work in Urban Enclave is in full pace. The managment claims to complete this project in the upcoming year. So, book your plot now with Apex Group as the current prices are on pre-launch basis.',
+  },
+  {
+    id: '3',
+    slug: 'al-rahim-city',
+    name: 'Al Rahim City',
+    category: 'City',
+    city: 'Bahawal Pur',
+    heroText: 'Al Rahim City Bahawalpur Map With All features And Latest Development.',
+    tagline: 'Al Rahim City Bahawalpur Map With All features And Latest Development.',
+    overview: 'The real estate industry, despite being highly expensive, provides rare community-building & urban living infrastructures in Pakistan. A considerable number of property developers sell only cemented infrastructures in the name of modern housing projects. You are pretty aware of the increase in property prices with no end in sight.Hussain Developer has started rendering its services because of the ethical provision of real estate facilities & amenities according to the charged property rates. Al Rahim City offers 3 Marla Plots, 5 Marla Urban Terraces Homes, and 2 Marla Commercial Plots in its beautiful enclave situated at an attractive geographical location.',
+    location: 'Al Rahim Paradise & City Jhangi Wala Road Near Drug Laboratory Opposite Al Haram Town Bahawalpur.',
+    paymentPlans: ['Rate RS 800,000 per marla Total Net Cash.'],
+    constructionUpdate: 'The construction work in Urban Enclave is in full pace. The managment claims to complete this project in the upcoming year. So, book your plot now with Apex Group as the current prices are on pre-launch basis.',
+  },
+  {
+    id: '4',
+    slug: 'al-rahim-paradise',
+    name: 'Al Rahim Paradise',
+    category: 'Paradise',
+    city: 'Bahawal Pur',
+    heroText: 'Al Rahim Paradise Bahawalpur Map With All features And Latest Development.',
+    tagline: 'Al Rahim Paradise Bahawalpur Map With All features And Latest Development.',
+    overview: 'The real estate industry, despite being highly expensive, provides rare community-building & urban living infrastructures in Pakistan. A considerable number of property developers sell only cemented infrastructures in the name of modern housing projects. You are pretty aware of the increase in property prices with no end in sight.Hussain Developer has started rendering its services because of the ethical provision of real estate facilities & amenities according to the charged property rates. Urban Enclave offers 3 Marla Plots, 5 Marla Urban Terraces Homes, and 2 Marla Commercial Plots in its beautiful enclave situated at an attractive geographical location.',
+    location: 'Jhangi Wala Road Near Drug Laboratory oppositet Al Haram Town Bahawalpur.',
+    paymentPlans: ['Rate RS 800,000 per marla Total Net Cash.'],
+    constructionUpdate: 'The construction work in Urban Enclave is in full pace. The managment claims to complete this project in the upcoming year. So, book your plot now with Apex Group as the current prices are on pre-launch basis.',
+  },
+  {
+    id: '5',
+    slug: 'al-rahim-housing-scheme',
+    name: 'Al Rahim Housing Scheme',
+    category: 'Housing Scheme',
+    city: 'Bahawal Pur',
+    heroText: 'Al Rahim Housing Scheme Bahawalpur Map With All features And Latest Development.',
+    tagline: 'Al Rahim Housing Scheme Bahawalpur Map With All features And Latest Development.',
+    overview: 'The real estate industry, despite being highly expensive, provides rare community-building & urban living infrastructures in Pakistan. A considerable number of property developers sell only cemented infrastructures in the name of modern housing projects. You are pretty aware of the increase in property prices with no end in sight.Hussain Developer has started rendering its services because of the ethical provision of real estate facilities & amenities according to the charged property rates. Al Rahim Homes offers 3 Marla Plots, 5 Marla Urban Terraces Homes, and 2 Marla Commercial Plots in its beautiful enclave situated at an attractive geographical location.',
+    location: 'Al Rahim Housing Scheme Hasilpur road Near Govt Employees Housing Scheme Bahawalpur.',
+    paymentPlans: [
+      'A Block Rate 625000 per marla 30% Advance 2.5 Years of installment.',
+      'B Block Rate 575000 per marla 30% Advance 2.5 Years of installment.',
+      ' C Block Rate 500000 per marla 30% Advance 2.5 Years of installment',
+      'D Block Rate 450000 per marla 30% Advance 2.5 Years of installment',
+    ],
+    constructionUpdate: 'The construction work in Urban Enclave is in full pace. The managment claims to complete this project in the upcoming year. So, book your plot now with Apex Group as the current prices are on pre-launch basis.',
+  },
+  {
+    id: '6',
+    slug: 'al-rahim-homes-housing-scheme',
+    name: 'Al Rahim Homes Housing Scheme',
+    category: 'Housing Scheme',
+    city: 'Bahawal Pur',
+    heroText: 'Al Rahim Homes Housing Scheme Bahawalpur Map With All features And Latest Development.',
+    tagline: 'Al Rahim Homes Housing Scheme Bahawalpur Map With All features And Latest Development.',
+    overview: 'The real estate industry, despite being highly expensive, provides rare community-building & urban living infrastructures in Pakistan. A considerable number of property developers sell only cemented infrastructures in the name of modern housing projects. You are pretty aware of the increase in property prices with no end in sight.Hussain Developer has started rendering its services because of the ethical provision of real estate facilities & amenities according to the charged property rates. Urban Enclave offers 3 Marla Plots, 5 Marla Urban Terraces Homes, and 2 Marla Commercial Plots in its beautiful enclave situated at an attractive geographical location.',
+    location: 'Al Rahim Homes Jhangi wala road behind Sir Sadig Hospital Bahawal Pur',
+    paymentPlans: ['Rate RS 800,000 per marla,Advance 30% and 2 years of Installement time'],
+    constructionUpdate: 'The construction work in Urban Enclave is in full pace. The managment claims to complete this project in the upcoming year. So, book your plot now with Apex Group as the current prices are on pre-launch basis.',
+  },
+  {
+    id: '7',
+    slug: 'al-rahim-smart-city',
+    name: 'Al Rahim Smart City',
+    category: 'Smart City',
+    city: 'Bahawal Pur',
+    heroText: 'Al Rahim Smart City Bahawalpur Map With All features And Latest Development.',
+    tagline: 'Al Rahim Smart City Bahawalpur Map With All features And Latest Development.',
+    overview: 'The real estate industry, despite being highly expensive, provides rare community-building & urban living infrastructures in Pakistan. A considerable number of property developers sell only cemented infrastructures in the name of modern housing projects. You are pretty aware of the increase in property prices with no end in sight.Hussain Developer has started rendering its services because of the ethical provision of real estate facilities & amenities according to the charged property rates. Al Rahim Smart City offers 3 Marla Plots, 5 Marla Urban Terraces Homes, and 2 Marla Commercial Plots in its beautiful enclave situated at an attractive geographical location.',
+    location: 'Al Rahim Smat City Jhangi wala Road Behind sir sadiq hospital Bahawalpur.',
+    paymentPlans: ['Rate Rs 700,000 and Advance is 25% for 3 Years of Installment Time.'],
+    constructionUpdate: 'The construction work in Al Rahim Smart City is in full pace. The managment claims to complete this project in the upcoming year. So, book your plot now with Apex Group as the current prices are on pre-launch basis.',
+  },
+  {
+    id: '8',
+    slug: 'al-rahim-commercial-market',
+    name: 'Al Rahim Commercial Markete',
+    category: 'Commercial Markete',
+    city: 'Bahawal Pur',
+    heroText: 'Al Rahim Commercial Markete Bahawalpur Map With All features And Latest Development.',
+    tagline: 'Al Rahim Commercial Markete Bahawalpur Map With All features And Latest Development.',
+    overview: 'The real estate industry, despite being highly expensive, provides rare community-building & urban living infrastructures in Pakistan. A considerable number of property developers sell only cemented infrastructures in the name of modern housing projects. You are pretty aware of the increase in property prices with no end in sight.Hussain Developer has started rendering its services because of the ethical provision of real estate facilities & amenities according to the charged property rates. Al Rahim Commercial Markete offers 3 Marla Plots, 5 Marla Urban Terraces Homes, and 2 Marla Commercial Plots in its beautiful enclave situated at an attractive geographical location.',
+    location: 'Al Rahim Commercial Markete Northern Bypass Near Salanh Chowk Bahawalpur.',
+    paymentPlans: ['Rate Rs 1850,000 per marla 25% Advance 3 Years of Installment time.'],
+    constructionUpdate: 'The construction work in Al Rahim Commercial Markete is in full pace. The managment claims to complete this project in the upcoming year. So, book your plot now with Apex Group as the current prices are on pre-launch basis.',
+  },
+]
+
+export const projects = projectDefinitions.map((project) => ({
+  ...project,
+  listingImage: getAsset(project.slug, 'listing-card.webp'),
+  locationIcon: getAsset(project.slug, 'location-icon.webp'),
+  mapImage: getAsset(project.slug, 'map.webp'),
+  gallery: Array.from({ length: 5 }, (_, index) =>
+    getAsset(project.slug, `gallery-${String(index + 1).padStart(2, '0')}.webp`),
+  ),
+}))
+
+export const projectCategories = ['All', ...new Set(projects.map((project) => project.category))]
+
+export const getProjectBySlug = (value) => projects.find((project) => project.slug === value || project.id === value)

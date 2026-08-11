@@ -1,0 +1,268 @@
+/* Shared internal-page hero system — aligned with the Home hero */
+.projects-page-hero,
+.press-hero,
+.maps-hero,
+.forms-hero,
+.facilities-hero,
+.contact-hero,
+.video-hero,
+.project-detail-hero,
+.map-detail-hero,
+.press-detail-hero {
+  min-height: 100svh;
+}
+
+.projects-page-hero__content,
+.press-hero__inner,
+.maps-hero__inner,
+.forms-hero__content,
+.facilities-hero__content,
+.contact-hero__grid,
+.video-hero__content,
+.project-detail-hero__content,
+.map-detail-hero__content,
+.press-detail-hero__content {
+  min-height: 100svh;
+}
+
+.projects-page-hero__content,
+.press-hero__inner,
+.maps-hero__inner,
+.forms-hero__content,
+.facilities-hero__content,
+.contact-hero__grid,
+.video-hero__content,
+.map-detail-hero__content,
+.press-detail-hero__content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: clamp(108px, 15vh, 150px);
+  padding-bottom: clamp(72px, 10vh, 105px);
+  text-align: center;
+}
+
+.project-detail-hero__content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: clamp(108px, 15vh, 150px);
+  padding-bottom: clamp(72px, 10vh, 105px);
+  text-align: center;
+}
+
+.projects-page-hero__copy,
+.press-hero__copy,
+.maps-hero__copy,
+.forms-hero__content,
+.facilities-hero__content,
+.contact-hero__content,
+.video-hero__copy,
+.project-detail-hero__content,
+.map-detail-hero__content,
+.press-detail-hero__content {
+  width: 100%;
+  max-width: 880px;
+  margin-inline: auto;
+}
+
+.projects-page-hero h1,
+.press-hero h1,
+.maps-hero h1,
+.forms-hero h1,
+.facilities-hero h1,
+.contact-hero h1,
+.video-hero h1,
+.project-detail-hero h1,
+.map-detail-hero h1,
+.press-detail-hero h1 {
+  max-width: 100%;
+  margin: 0 auto 28px;
+  color: #fff;
+  font-family: var(--display);
+  font-size: clamp(3rem, 5.2vw, 5.25rem);
+  font-weight: 700;
+  letter-spacing: -0.05em;
+  line-height: 0.96;
+  text-align: center;
+  text-shadow: 0 4px 35px rgba(0, 0, 0, 0.22);
+}
+
+.projects-page-hero h1 em,
+.press-hero h1 em,
+.maps-hero h1 em,
+.forms-hero h1 em,
+.facilities-hero h1 em,
+.contact-hero h1 em,
+.video-hero h1 em,
+.project-detail-hero h1 em,
+.map-detail-hero h1 em,
+.press-detail-hero h1 em {
+  color: var(--accent);
+  font-family: inherit;
+  font-style: normal;
+  font-weight: inherit;
+}
+
+.projects-page-hero .eyebrow,
+.press-hero .eyebrow,
+.maps-hero .eyebrow,
+.forms-hero .eyebrow,
+.facilities-hero .eyebrow,
+.contact-hero .eyebrow,
+.video-hero .eyebrow,
+.project-detail-hero .eyebrow,
+.map-detail-hero .eyebrow,
+.press-detail-hero .eyebrow {
+  justify-content: center;
+}
+
+.projects-page-hero__copy > p:not(.eyebrow),
+.press-hero__copy > p:not(.eyebrow),
+.maps-hero__copy > p:not(.eyebrow),
+.forms-hero__content > p:not(.eyebrow),
+.facilities-hero__content > p:not(.eyebrow),
+.contact-hero__content > p:not(.eyebrow),
+.video-hero__copy > p:not(.eyebrow),
+.project-detail-hero__lead,
+.map-detail-hero__content > p:last-child {
+  max-width: 660px;
+  margin: 0 auto 34px;
+  color: rgba(255, 255, 255, 0.8);
+  font-family: var(--display);
+  font-size: clamp(0.94rem, 1.25vw, 1.08rem);
+  font-weight: 500;
+  line-height: 1.65;
+  text-align: center;
+}
+
+.projects-page-hero__overlay,
+.maps-hero__overlay,
+.forms-hero__overlay,
+.facilities-hero__overlay,
+.project-detail-hero__overlay,
+.map-detail-hero__overlay,
+.press-detail-hero__overlay {
+  background: linear-gradient(180deg, rgba(5, 27, 43, 0.62), rgba(5, 27, 43, 0.86));
+}
+
+.press-hero__wash {
+  background: linear-gradient(180deg, rgba(5, 27, 43, 0.62), rgba(5, 27, 43, 0.88));
+}
+
+.projects-page-hero__media img,
+.press-hero__background,
+.maps-hero__background,
+.forms-hero > img,
+.facilities-hero > img,
+.project-detail-hero__image,
+.map-detail-hero > img,
+.press-detail-hero > img,
+.video-hero__film {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.maps-hero__actions,
+.video-hero__actions {
+  justify-content: center;
+}
+
+.press-hero__link {
+  justify-content: center;
+}
+
+.contact-hero__content .button,
+.forms-hero__button,
+.facilities-hero__content .button,
+.projects-page-hero__copy .button,
+.maps-hero__actions .button,
+.video-hero__actions .button,
+.project-detail-hero__content .button {
+  box-shadow: 0 16px 38px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 760px) {
+  .projects-page-hero__content,
+  .press-hero__inner,
+  .maps-hero__inner,
+  .forms-hero__content,
+  .facilities-hero__content,
+  .contact-hero__grid,
+  .video-hero__content,
+  .project-detail-hero__content,
+  .map-detail-hero__content,
+  .press-detail-hero__content {
+    min-height: 100svh;
+    padding-top: clamp(96px, 14vh, 118px);
+    padding-bottom: clamp(62px, 9vh, 85px);
+  }
+
+  .projects-page-hero h1,
+  .press-hero h1,
+  .maps-hero h1,
+  .forms-hero h1,
+  .facilities-hero h1,
+  .contact-hero h1,
+  .video-hero h1,
+  .project-detail-hero h1,
+  .map-detail-hero h1,
+  .press-detail-hero h1 {
+    margin-bottom: 20px;
+    font-size: clamp(2.6rem, 12vw, 3.7rem);
+    line-height: 0.98;
+  }
+
+  .maps-hero__actions,
+  .video-hero__actions {
+    align-items: center;
+  }
+}
+
+@media (max-width: 640px) and (max-height: 760px) {
+  .projects-page-hero__content,
+  .press-hero__inner,
+  .maps-hero__inner,
+  .forms-hero__content,
+  .facilities-hero__content,
+  .contact-hero__grid,
+  .video-hero__content,
+  .project-detail-hero__content,
+  .map-detail-hero__content,
+  .press-detail-hero__content {
+    padding-top: 80px;
+    padding-bottom: 48px;
+  }
+
+  .projects-page-hero h1,
+  .press-hero h1,
+  .maps-hero h1,
+  .forms-hero h1,
+  .facilities-hero h1,
+  .contact-hero h1,
+  .video-hero h1,
+  .project-detail-hero h1,
+  .map-detail-hero h1,
+  .press-detail-hero h1 {
+    margin-bottom: 14px;
+    font-size: clamp(2rem, 8.2vh, 2.9rem);
+  }
+
+  .projects-page-hero__copy > p:not(.eyebrow),
+  .press-hero__copy > p:not(.eyebrow),
+  .maps-hero__copy > p:not(.eyebrow),
+  .forms-hero__content > p:not(.eyebrow),
+  .facilities-hero__content > p:not(.eyebrow),
+  .contact-hero__content > p:not(.eyebrow),
+  .video-hero__copy > p:not(.eyebrow),
+  .project-detail-hero__lead,
+  .map-detail-hero__content > p:last-child {
+    margin-bottom: 17px;
+    font-size: 0.78rem;
+    line-height: 1.45;
+  }
+}
