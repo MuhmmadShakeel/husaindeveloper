@@ -23,8 +23,13 @@ const getInitialTheme = () => {
   return savedTheme === 'signature' ? 'signature' : 'hussain'
 }
 
+const getLocationKey = () => (
+  `${window.location.pathname}${window.location.search}${window.location.hash}`
+)
+
 function App() {
   const [theme, setTheme] = useState(getInitialTheme)
+  const [locationKey, setLocationKey] = useState(getLocationKey)
 
   useEffect(() => {
     document.documentElement.dataset.theme = theme
@@ -40,13 +45,82 @@ function App() {
     })
   }, [])
 
+  useEffect(() => {
+    const syncLocation = () => setLocationKey(getLocationKey())
+
+    const handleInternalNavigation = (event) => {
+      if (
+        event.defaultPrevented
+        || event.button !== 0
+        || event.metaKey
+        || event.ctrlKey
+        || event.shiftKey
+        || event.altKey
+      ) return
+
+      const anchor = event.target instanceof Element
+        ? event.target.closest('a[href]')
+        : null
+
+      if (
+        !anchor
+        || anchor.hasAttribute('download')
+        || (anchor.target && anchor.target !== '_self')
+      ) return
+
+      const destination = new URL(anchor.href, window.location.href)
+      if (
+        destination.origin !== window.location.origin
+        || !['http:', 'https:'].includes(destination.protocol)
+      ) return
+
+      event.preventDefault()
+      const nextLocation = `${destination.pathname}${destination.search}${destination.hash}`
+
+      if (nextLocation === getLocationKey()) {
+        if (destination.hash) {
+          const target = document.getElementById(decodeURIComponent(destination.hash.slice(1)))
+          target?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+        }
+        return
+      }
+
+      window.history.pushState({}, '', nextLocation)
+      syncLocation()
+    }
+
+    document.addEventListener('click', handleInternalNavigation)
+    window.addEventListener('popstate', syncLocation)
+
+    return () => {
+      document.removeEventListener('click', handleInternalNavigation)
+      window.removeEventListener('popstate', syncLocation)
+    }
+  }, [])
+
+  useEffect(() => {
+    const frame = window.requestAnimationFrame(() => {
+      const hash = window.location.hash
+      if (hash) {
+        const target = document.getElementById(decodeURIComponent(hash.slice(1)))
+        target?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+      } else {
+        window.scrollTo({ top: 0, left: 0, behavior: 'auto' })
+      }
+      AOS.refreshHard()
+    })
+
+    return () => window.cancelAnimationFrame(frame)
+  }, [locationKey])
+
   const toggleTheme = () => {
     setTheme((currentTheme) =>
       currentTheme === 'hussain' ? 'signature' : 'hussain',
     )
   }
 
-  const path = window.location.pathname.replace(/\/+$/, '') || '/'
+  const currentUrl = new URL(locationKey, window.location.origin)
+  const path = currentUrl.pathname.replace(/\/+$/, '') || '/'
   const projectSlug = path.startsWith('/projects/') ? path.split('/')[2] : null
   const selectedProject = projectSlug ? getProjectBySlug(projectSlug) : null
   const mapSlug = path.startsWith('/maps/') ? path.split('/')[2] : null
