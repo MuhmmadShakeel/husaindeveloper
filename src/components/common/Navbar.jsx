@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react'
 import logo from '../../assets/images/site-branding/hussain-developers-logo.webp'
 
 const navigation = [
-  { label: 'About', href: '/#about' },
+  { label: 'About', href: '/about' },
   { label: 'Projects', href: '/projects' },
   {
     label: 'Media Center',

@@ -15,6 +15,7 @@ import MapDetailPage from './pages/MapDetailPage'
 import DownloadFormsPage from './pages/DownloadFormsPage'
 import FacilitiesPage from './pages/FacilitiesPage'
 import ContactPage from './pages/ContactPage'
+import AboutPage from './pages/AboutPage'
 import ProjectDetailsPage from './pages/detailed-project-pages/ProjectDetailsPage'
 import { getProjectBySlug } from './data/projects'
 
@@ -137,6 +138,7 @@ function App() {
   if (path === '/possession-forms') page = <DownloadFormsPage />
   if (path === '/facilities') page = <FacilitiesPage />
   if (path === '/contacts') page = <ContactPage />
+  if (path === '/about') page = <AboutPage />
   if (projectSlug) page = selectedProject ? <ProjectDetailsPage project={selectedProject} /> : <ProjectsPage />
 
   return (

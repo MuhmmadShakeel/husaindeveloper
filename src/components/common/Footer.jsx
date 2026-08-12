@@ -17,7 +17,7 @@ function Footer() {
 
         <div className="footer__column">
           <h3>Quick Links</h3>
-          <a href="/#about">About</a>
+          <a href="/about">About</a>
           <a href="/facilities">Facilities</a>
           <a href="/projects">Projects</a>
           <a href="/#media-center">Media Center</a>
