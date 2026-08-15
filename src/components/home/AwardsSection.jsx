@@ -32,7 +32,7 @@ function AwardsSection() {
           <div className="awards-section__caption">
             <small>Official recognition</small>
             <strong>Asia Pacific International Property Awards</strong>
-            <span>Kuala Lumpur · Malaysia</span>
+            <span>Kuala Lumpur  Malaysia</span>
           </div>
           <div className="awards-section__seal"><strong>10</strong><span>Prestigious<br />awards</span></div>
         </div>
